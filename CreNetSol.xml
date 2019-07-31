@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCreNetSolProp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CreNetSolProp>
+    <Name>Source CreNet</Name>
+    <Value>D:\projets\Gizeh\Temp\CreNet-M82</Value>
+    <Type>dir</Type>
+  </CreNetSolProp>
+  <CreNetSolProp>
+    <Name>Répertoire composant</Name>
+    <Value>D:\projets\Gizeh\M82-Budget_tmp</Value>
+    <Type>dir</Type>
+  </CreNetSolProp>
+  <CreNetSolProp>
+    <Name>Nom du composant</Name>
+    <Value>M82</Value>
+    <Type>str</Type>
+  </CreNetSolProp>
+  <CreNetSolProp>
+    <Name>Répertoire virtuel</Name>
+    <Value>GizehDev</Value>
+    <Type>str</Type>
+  </CreNetSolProp>
+</ArrayOfCreNetSolProp>

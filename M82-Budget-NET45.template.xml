@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<composant nom="M82-Budget" xsi:noNamespaceSchemaLocation="\\serpsalmilfile1\RDVERSIONS\Gizeh\Mgdis\xsd\BUILD.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <propriete nom="description" valeur="Budget opération" />
+  <projet langage="cs" code="src/SupportExterne-Common/" rootnamespace="SPO.SupportExterne.Common">
+    <attribut nom="output" valeur="SPO.SupportExterne.Common.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <attribut nom="sans.nom.fort" valeur="true" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Xml.dll" />
+	  <reference type="runtime" composant="N03-SupportsExternes" nom="MGDIS.N03.Common.Interface.dll" version="5.02.00" />
+      <reference type="runtime" composant="N20-Lanceur" nom="MGDIS.N20.Common.dll" version="1.69.00" />
+    </references>
+    <serveurcible interface="CLICKONCE" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+  <projet langage="cs" code="src/SupportExterne-Work/" rootnamespace="SPO.SupportExterne.Work">
+    <attribut nom="output" valeur="SPO.SupportExterne.Work.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <attribut nom="sans.nom.fort" valeur="true" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="projet" nom="SPO.SupportExterne.Common.dll" />
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Xml.dll" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETDB.dll" version="8.02.02" />
+      <reference type="runtime" composant="N03-SupportsExternes" nom="MGDIS.N03.Common.Interface.dll" version="5.02.00" />
+      <reference type="runtime" composant="N03-SupportsExternes" nom="MGDIS.N03.Work.Interface.dll" version="5.02.00" />
+      <reference type="runtime" composant="N20-Lanceur" nom="MGDIS.N20.Common.dll" version="1.69.00" />
+    </references>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+  <projet langage="cs" code="src/MontageProxy/" rootnamespace="MontageProxy">
+    <attribut nom="output" valeur="MontageProxy.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <attribut nom="sans.nom.fort" valeur="true" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Windows.Forms.dll" />
+      <reference type="framework" nom="System.Xml.dll" />
+      <reference type="runtime" composant="N20-Lanceur" nom="MGDIS.N20.Common.dll" version="1.69.00" />
+    </references>
+    <serveurcible interface="CLICKONCE" instpost="" applicatif_NET11="" applicatif_NET20="" />
+  </projet>
+  <projet langage="cs" code="src/SPOImportAPI/SPOImportAPI/" rootnamespace="SPO.ImportAPI">
+    <attribut nom="output" valeur="SPOImportAPI.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Xml.dll" />
+    </references>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+  <projet langage="cs" code="src/SPOServices/" rootnamespace="SPOServices">
+    <attribut nom="output" valeur="SPOServices.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="projet" nom="SPOImportAPI.dll" />
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Xml.dll" />
+      <reference type="framework" nom="System.EnterpriseServices.dll" />
+      <reference type="framework" nom="System.Web.Services.dll" />
+    </references>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+  <projet langage="cs" code="src/M82-DB/" rootnamespace="MGDIS.M82.DB">
+    <attribut nom="output" valeur="MGDIS.M82.DB.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Data.OracleClient.dll" />
+      <reference type="framework" nom="System.XML.dll" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETDB.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETCommon.dll" version="8.02.02" />
+    </references>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+  <projet langage="cs" code="src/M82-Commun/" rootnamespace="SPO.M82Commun">
+    <attribut nom="output" valeur="SPO.M82.Commun.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Core.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Xml.dll" />
+    </references>
+    <serveurcible interface="CLICKONCE" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+
+  <projet langage="cs" code="src/M82-Work/" rootnamespace="MGDIS.M82.Work">
+    <attribut nom="output" valeur="MGDIS.M82.Work.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="projet" nom="MGDIS.M82.DB.dll" />
+      <reference type="projet" nom="SPO.M82.Commun.dll" />
+      <reference type="projet" nom="SPOImportAPI.dll" />
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Core.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.XML.dll" />
+      <reference type="framework" nom="System.Web.dll" />
+      <reference type="framework" nom="System.Runtime.Serialization.Formatters.Soap.dll" />
+	  <reference type="framework" nom="System.IdentityModel.dll" />
+	  <reference type="runtime" composant="N00-Redist" nom="System.IdentityModel.Tokens.Jwt.dll" version="1.86.01" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETDB.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETCommon.dll" version="8.02.02" />
+	  <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.Common.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.Work.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.ServiceSvc.dll" version="8.02.02" />
+      <reference type="runtime" composant="N02-GestionDossier" nom="MGDIS.N02.Work.dll" version="6.03.00" />
+      <reference type="runtime" composant="N02-GestionDossier" nom="MGDIS.N02.Work.Interfaces.dll" version="6.03.00" />
+      <reference type="runtime" composant="N03-SupportsExternes" nom="MGDIS.N03.Work.dll" version="5.02.00" />
+      <reference type="runtime" composant="N05-TableauxDeBord" nom="MGDIS.N05.Work.dll" version="6.03.00" />
+      <reference type="runtime" composant="N14-Gantt" nom="MGDIS.N14.Work.Interfaces.dll" version="1.61.01" />
+      <reference type="runtime" composant="N14-Gantt" nom="MGDIS.N14.Work.dll" version="1.61.01" />
+      <reference type="runtime" composant="N20-Lanceur" nom="MGDIS.N20.Common.dll" version="1.69.00" />
+      <reference type="runtime" composant="M01-Tiers" nom="MGDIS.M01.Work.dll" version="5.03.00" />
+      <reference type="runtime" composant="N00-Redist" nom="Aspose.Cells.dll" version="1.86.01" />
+      <reference type="runtime" composant="N00-Redist" nom="Newtonsoft.Json.dll" version="1.86.01" />
+    </references>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+  <projet langage="cs" code="src/M82-Soap/" rootnamespace="MGDIS.M82.Soap">
+    <attribut nom="output" valeur="MGDIS.M82.Soap.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="projet" nom="MGDIS.M82.Work.dll" />
+      <reference type="projet" nom="SPO.M82.Commun.dll" />
+      <reference type="projet" nom="SPOImportAPI.dll" />
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Core.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Configuration.dll" />
+      <reference type="framework" nom="System.XML.dll" />
+      <reference type="framework" nom="System.Web.dll" />
+      <reference type="framework" nom="System.Web.Services.dll" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETCommon.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETDB.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.Work.dll" version="8.02.02" />
+	  <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.Common.dll" version="8.02.02" />	  
+	  <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.ServiceSvc.dll" version="8.02.02" />	  
+      <reference type="runtime" composant="N02-GestionDossier" nom="MGDIS.N02.Work.dll" version="6.03.00" />
+      <reference type="runtime" composant="N20-Lanceur" nom="MGDIS.N20.Common.dll" version="1.69.00" />
+    </references>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+ 
+   <projet langage="cs" code="src/M82-WA/" rootnamespace="MGDIS.M82.WA">
+    <attribut nom="output" valeur="MGDIS.M82.WA.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="false" />
+    <attribut nom="nunit" valeur="false" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>
+      <reference type="runtime" composant="N01-AGL" nom="AglNETDB.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETCommon.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.Work.dll" version="8.02.02" />                  
+      <!--
+	  <reference type="runtime" composant="N00-Redist" nom="Newtonsoft.Json.dll" version="1.86.00" />
+	  -->
+	  <reference type="projet" nom="MGDIS.M82.Work.dll" />
+      <reference type="projet" nom="SPO.M82.Commun.dll" />
+
+      <reference type="framework" nom="System.dll" />
+	  <reference type="framework" nom="System.Runtime.dll" />
+      <reference type="framework" nom="System.Core.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.XML.dll" />
+      <reference type="framework" nom="System.Web.dll" />      
+	  <reference type="framework" nom="System.ComponentModel.DataAnnotations.dll" />
+	  <reference type="framework" nom="System.Data.DataSetExtensions.dll" />
+	  <reference type="framework" nom="System.Net.Http.dll" />
+	  <reference type="framework" nom="System.Xml.Linq.dll" />
+	  
+		<reference type="projet" nom="Microsoft.Data.Edm.dll" />	  	  
+		<reference type="projet" nom="Microsoft.Data.OData.dll" />	  	  
+		<reference type="projet" nom="Microsoft.Extensions.DependencyInjection.dll" />	  	  
+		<reference type="projet" nom="Microsoft.Extensions.DependencyInjection.Abstractions.dll" />	  	  
+		<reference type="projet" nom="Microsoft.OData.Core.dll" />	  	  
+		<reference type="projet" nom="Microsoft.OData.Edm.dll" />	  	  
+		<reference type="projet" nom="Microsoft.Spatial.dll" />	  	  
+		<reference type="projet" nom="Microsoft.Web.Infrastructure.dll" />	  	  
+		<reference type="projet" nom="System.Net.Http.Formatting.dll" />	  	  
+		<reference type="projet" nom="System.Spatial.dll" />	  	  
+		<reference type="projet" nom="System.Web.Http.dll" />	  	  
+		<reference type="projet" nom="System.Web.Http.WebHost.dll " />	  	  
+		<reference type="projet" nom="System.Web.OData.dll" />	  	       
+
+    </references>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+ 
+  <projet langage="cs" code="src/SPOServiceWCF/" rootnamespace="SPOServicesWCF">
+    <attribut nom="output" valeur="SPOServiceWCF.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <sources>
+      <include nom="**.cs" />
+    </sources>
+    <references>	
+	  <reference type="projet" nom="SPOServices.dll" />
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.XML.dll" />
+      <reference type="framework" nom="System.ServiceModel.dll" />
+	  <reference type="framework" nom="System.ServiceModel.Web.dll" />
+	  <reference type="framework" nom="System.Web.dll" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETCommon.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETDB.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.Work.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.Common.dll" version="8.02.02" />
+      <reference type="runtime" composant="M01-Tiers" nom="MGDIS.M01.Work.dll" version="5.03.00" />
+      <reference type="runtime" composant="N20-Lanceur" nom="MGDIS.N20.Common.dll" version="1.69.00" />
+      <reference type="runtime" composant="N02-GestionDossier" nom="MGDIS.N02.Work.Interfaces.dll" version="6.03.00" />
+      <reference type="runtime" composant="M0101-TiersProgos" nom="MGDIS.Tiers.ServiceWCF.dll" version="1.32.00" />
+      <reference type="runtime" composant="N00-Redist" nom="Newtonsoft.Json.dll" version="1.86.01" />
+    </references>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="BIN" />
+  </projet>
+ 
+  
+  <projet langage="fichiers">
+    <fileset basedir="src/SPOServiceWCF/">
+      <include name="ServiceWCF.svc" />
+    </fileset>
+    <serveurcible interface="" instpost="APPLI" applicatif_NET11="" applicatif_NET20="M82" />
+  </projet>
+  
+  <projet langage="fichiers">
+    <fileset basedir="src/M82-Soap/Root/">
+      <include name="M82/M82.asmx" />
+      <include name="M82/M82_SMO.asmx" />
+      <include name="M82/M82SpoEvent.asmx" />
+      <include name="M82/WFBC.aspx" />
+      <include name="M82/Login.aspx" />
+      <include name="M82-Modeles.xml" />
+    </fileset>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="ROOT" />
+  </projet>
+  <projet langage="fichiers">
+    <fileset basedir="src/M82-Soap/Root/">
+      <include name="M82/menu.html" />
+      <include name="M82/menu.js" />
+      <include name="M82/libs/**.*" />
+    </fileset>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="ROOT" />
+  </projet>  
+  <projet langage="GenWSDL">
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="" />
+  </projet>
+  <projet langage="fichiers">
+    <fileset basedir="src">	
+      <include name="Aide/**.htm" />
+	  <include name="Aide/documentations/**.*" />
+	  <include name="Aide/images/**.jpg" />
+    </fileset>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="ROOT" />
+  </projet>    
+  <projet langage="cs" code="src/M82-Comp/" rootnamespace="MGDIS.M82.Comp" actif="true">
+    <attribut nom="output" valeur="MGDIS.M82.Comp.dll" />
+    <attribut nom="target" valeur="Library" />
+    <attribut nom="warnaserror" valeur="true" />
+    <attribut nom="nunit" valeur="false" />
+    <attribut nom="sans.nom.fort" valeur="true" />
+    <sources>
+      <include nom="**.cs" />
+      <exclude nom="Web References\**.cs" />
+      <!--
+			<include nom="Resources\Web.png"/>
+			<include nom="Resources\email.png"/>
+			-->
+    </sources>
+    <references>
+      <reference type="web" wsdl="M82/M82.asmx?WSDL" nom="Web References\ServiceM82\Reference.cs" />	  	  
+      <reference type="framework" nom="System.dll" />
+      <reference type="framework" nom="System.Core.dll" />
+      <reference type="framework" nom="System.Data.dll" />
+      <reference type="framework" nom="System.Drawing.dll" />
+      <reference type="framework" nom="System.EnterpriseServices.dll" />
+      <reference type="framework" nom="System.Transactions.dll" />
+      <reference type="framework" nom="System.Net.Http.dll" />	  	  
+      <reference type="framework" nom="System.Web.Services.dll" />
+      <reference type="framework" nom="System.Windows.Forms.dll" />
+      <reference type="framework" nom="System.Windows.Forms.DataVisualization.dll" />
+      <reference type="framework" nom="System.Xml.dll" />
+      <reference type="framework" nom="System.Configuration.dll" />
+	  <reference type="projet" nom="Microsoft.mshtml.dll" />	  	  
+      <reference type="projet" nom="SPO.M82.Commun.dll" />
+      <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.WinForms.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="MGDIS.N01.Comp.dll" version="8.02.02" />
+      <reference type="runtime" composant="N01-AGL" nom="AglNETCommon.dll" version="8.02.02" />
+      <reference type="runtime" composant="N20-Lanceur" nom="MGDIS.N20.Common.dll" version="1.69.00" />
+      <reference type="runtime" composant="N21-Portail" nom="MGDIS.N21.Comp.dll" version="1.68.00" />
+      <reference type="runtime" composant="N02-GestionDossier" nom="MGDIS.N02.Comp.dll" version="6.03.00" />
+      <reference type="runtime" composant="N05-TableauxDeBord" nom="MGDIS.N05.Comp.dll" version="6.03.00" />
+      <reference type="runtime" composant="N15-MoteurRegles" nom="MGDIS.N15.Comp.dll" version="1.55.00" />
+      <reference type="runtime" composant="N15-MoteurRegles" nom="MGDIS.N15.Common.dll" version="1.55.00" />
+      <reference type="runtime" composant="N00-Redist" nom="FarPoint.CalcEngine.dll" version="1.86.01" />
+      <reference type="runtime" composant="N00-Redist" nom="FarPoint.Excel.dll" version="1.86.01" />
+      <reference type="runtime" composant="N00-Redist" nom="FarPoint.PDF.dll" version="1.86.01" />
+      <reference type="runtime" composant="N00-Redist" nom="FarPoint.PluginCalendar.WinForms.dll" version="1.86.01" />
+      <reference type="runtime" composant="N00-Redist" nom="FarPoint.Win.dll" version="1.86.01" />
+      <reference type="runtime" composant="N00-Redist" nom="FarPoint.Win.Spread.dll" version="1.86.01" />
+      <reference type="runtime" composant="N00-Redist" nom="Aspose.Cells.dll" version="1.86.01" />
+      <reference type="runtime" composant="N00-Redist" nom="Newtonsoft.Json.dll" version="1.86.01" />
+	  <reference type="runtime" composant="N00-Redist" nom="EO.Base.dll" version="1.86.01" /> 	  
+	  <reference type="runtime" composant="N00-Redist" nom="EO.WebBrowser.dll" version="1.86.01" /> 	  
+	  <reference type="runtime" composant="N00-Redist" nom="EO.WebEngine.dll" version="1.86.01" /> 	  	  	  
+    </references>
+    <!--<fichiers>
+			<include nom="App.config"/>
+		</fichiers> -->
+    <serveurcible interface="CLICKONCE" instpost="" applicatif_NET11="" applicatif_NET20="" />
+  </projet>
+  <projet langage="fichiers">
+    <fileset basedir="src/Modeles">
+      <include name="Modeles/N03-XMLFILE/N01-SURCHARGEMODELE/**.xml"/>
+    </fileset>
+    <serveurcible interface="CLICKONCE" instpost="" applicatif_NET11="" applicatif_NET20=""/>
+  </projet>
+  <projet langage="fichiers">
+    <fileset basedir="src/Modeles">
+      <include name="Modeles/N03-HTML/**.xsl" />
+      <include name="Modeles/N03-HTML/**.xslt" />
+      <include name="Modeles/N03-HTML/**.png" />
+      <include name="Modeles/N03-HTML/**.jpg" />
+    </fileset>
+    <serveurcible interface="" instpost="APPLI" applicatif_NET11="" applicatif_NET20="ROOT" />
+  </projet>
+  <projet langage="fichiers">
+    <fileset basedir="src/Modeles">
+      <include name="Modeles/N03-IMP/**.xml" />
+      <include name="Modeles/N03-SQLFILE/**.sql" />
+      <include name="Modeles/N03-XMLFILE/**.xml" />
+      <include name="Modeles/N03-WASP/**.dot" />
+      <include name="Modeles/N03-RESSOURCES/**.*" />
+      <include name="Modeles/N03-HTML/**.htm" />
+      <include name="Modeles/N03-CASP-SPO/**.xlsx" />
+      <include name="Modeles/N03-CASP/**.xlsx" />
+      <include name="Modeles/N03-CASP/**.xls" />
+    </fileset>
+    <serveurcible interface="" instpost="" applicatif_NET11="" applicatif_NET20="ROOT" />
+  </projet>
+  <projet langage="fichiers">
+    <fileset basedir="src/Modeles">
+      <include name="Modeles/N03-SQLFILE/ODT**.sql" />
+    </fileset>
+    <serveurcible interface="CLICKONCEADMIN" instpost="APPLI" applicatif_NET11="" applicatif_NET20="" />
+  </projet>
+</composant>
